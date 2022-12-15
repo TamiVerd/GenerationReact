@@ -22,7 +22,7 @@ const HomePage = () => {
         const handleOnClick = useCallback (()=> navigate("/Auto", {}, [navigate]));
         const [user, setUsuario] = useState(usuario1);//state
         const [usuarioEditado, setUsuarioEditado] = useState(null);
-
+//presta atencion a los nmbres!! 
 //para eliminar usuario
         const userDelete=(rutUsuario)=>{
             const changeUser = user.filter(usuario => usuario.rut !== rutUsuario);
@@ -35,7 +35,7 @@ const HomePage = () => {
             ]
             setUsuario(addUsuario);
         }
-
+//para editar usuario
         const userEdit =(usuarioEditado)=>{
             const editUser = user.map(usuario => (usuario.rut === usuarioEditado.rut ? usuarioEditado : usuario))
             setUsuario(editUser)

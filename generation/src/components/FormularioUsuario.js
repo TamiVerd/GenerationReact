@@ -11,6 +11,7 @@ const FormUsuario = ({ userAdd, usuarioEditado, setUsuarioEditado, userEdit }) =
     const [usuario, setUsuario] = useState(initialUsuario);
     const { nombre, apellido, correo, rut } = usuario
 
+//para ver si ya existe un usuario con las caracteristivas (mostrarlo) o mostrar que datos estan ingresados
     useEffect(() => {
         if (usuarioEditado !== null) {
             setUsuario(usuarioEditado)
@@ -26,6 +27,7 @@ const FormUsuario = ({ userAdd, usuarioEditado, setUsuarioEditado, userEdit }) =
         }
     }, [usuarioEditado]);
 
+//para botos editar
     const handleInputChange = (e) => {
         const changedFromValue = {
             ...usuario,
@@ -38,6 +40,7 @@ const FormUsuario = ({ userAdd, usuarioEditado, setUsuarioEditado, userEdit }) =
         <div>
             <form class="row g-3">
 
+        {/* con esto el titulo del formurario es dinamico */}
                 {usuarioEditado !== null ? <h1>Editar Usuario</h1> : <h1>Ingrese Usuario</h1>}
 
                 <div class="col-md-3">
@@ -67,7 +70,8 @@ const FormUsuario = ({ userAdd, usuarioEditado, setUsuarioEditado, userEdit }) =
                         </label>
                     </div>
                 </div>
-
+{/* BOTONES ++esta parte tengo que repasarla++ */}
+{/* tener mucho cuidado con los nombres, tienen que ser lo mismo en home, aqui y en la tabla? */}
                 <div class="col-12">
                     {usuarioEditado !== null ? (
                         <button

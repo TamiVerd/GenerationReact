@@ -30,6 +30,9 @@ const TableUsuario = ({ usuarios, userDelete, setUsuarioEditado }) => {
                 {usuario.correo}
               </td>
               <td>
+                
+{/* BOTONES ++esta parte tengo que repasarla++ */}
+{/* lo de setuser user delete, todo eso :C  */}
                 <button
                   type="button"
                   class="btn btn-danger"
