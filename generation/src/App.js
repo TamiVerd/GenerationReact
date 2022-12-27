@@ -1,6 +1,9 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { AutoPage, HomePage, UsuarioPage } from "./pages";
+import { AutoPage, HomePage, UsuarioPage, VeterinariaPage } from "./pages";
+import PetpediaPage from "./pages/Petpedia";
+
+import './App.css';
 
 const App = () => {
   return (
@@ -12,6 +15,8 @@ const App = () => {
         <Route path="/" element={<HomePage />} />
         <Route path="/Auto" element={<AutoPage />} />
         <Route path="/Usuario" element={<UsuarioPage />} />
+        <Route path="/Petpedia" element={<PetpediaPage />} />
+        <Route path="/VeterinariaPage" element={<VeterinariaPage/>}/>
       </Routes>
     </BrowserRouter>
   );

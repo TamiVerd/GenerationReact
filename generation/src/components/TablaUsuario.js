@@ -1,12 +1,12 @@
 import React from "react";
 
-const TableUsuario = ({ usuarios, userDelete, setUsuarioEditado }) => {
+const TableUsuario = ({ usuarios, deleteUser, setUsuarioEditado }) => {
   return (
     <div>
       <table class="table" border={1}>
         <thead>
           <tr>
-            <th scope="col">Rut</th>
+            <th scope="col">Id</th>
             <th scope="col">Nombre</th>
             <th scope="col">Apellido</th>
             <th scope="col">Email</th>
@@ -18,13 +18,13 @@ const TableUsuario = ({ usuarios, userDelete, setUsuarioEditado }) => {
           {usuarios.map(usuario => (
             <tr>
               <td>
-                {usuario.rut}
+                {usuario.id}
               </td>
               <td>
-                {usuario.nombre}
+                {usuario.name}
               </td>
               <td>
-                {usuario.apellido}
+                {usuario.lastName}
               </td>
               <td>
                 {usuario.correo}
@@ -37,7 +37,7 @@ const TableUsuario = ({ usuarios, userDelete, setUsuarioEditado }) => {
                   type="button"
                   class="btn btn-danger"
                   onClick={() => {
-                    userDelete(usuario.rut);
+                    deleteUser(usuario.id);
                   }}
                 >
                   Eliminar
